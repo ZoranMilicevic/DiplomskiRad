@@ -3,21 +3,37 @@ package rs.ac.bg.etf.diplomskiRadZoranMilicevic.Data;
 import java.util.ArrayList;
 
 public class QuasiIdentifiers {
-    private ArrayList<ArrayList<String>> quasiIdentifiers;
+    private ArrayList<ArrayList<String>> quasiIdentifiersByRows;
 
-    public QuasiIdentifiers() {
-        quasiIdentifiers = new ArrayList<>();
+    public QuasiIdentifiers(ArrayList<ArrayList<String>> quasiIdentifiersByRows) {
+        this.quasiIdentifiersByRows = quasiIdentifiersByRows;
     }
 
-    public QuasiIdentifiers(ArrayList<ArrayList<String>> quasiIdentifiers) {
-        this.quasiIdentifiers = quasiIdentifiers;
+    public ArrayList<ArrayList<String>> getQuasiIdentifiersByRows() {
+        return quasiIdentifiersByRows;
     }
 
-    public ArrayList<ArrayList<String>> getQuasiIdentifiers() {
-        return quasiIdentifiers;
+    public void setQuasiIdentifiersByRows(ArrayList<ArrayList<String>> quasiIdentifiersByRows) {
+        this.quasiIdentifiersByRows = quasiIdentifiersByRows;
     }
 
-    public void setQuasiIdentifiers(ArrayList<ArrayList<String>> quasiIdentifiers) {
-        this.quasiIdentifiers = quasiIdentifiers;
+
+    public int getNumberOfRows(){
+        return quasiIdentifiersByRows.size();
+    }
+
+    public int getNUmberOfColumns(){
+        return quasiIdentifiersByRows.get(0).size();
+    }
+
+    public ArrayList<String> getRow(int i){
+        return quasiIdentifiersByRows.get(i);
+    }
+
+    public void supress(ArrayList<Integer> rowNumberList){
+        for(int i: rowNumberList) {
+            ArrayList<String> row = quasiIdentifiersByRows.get(i);
+            for(String s:row)s="*";
+        }
     }
 }

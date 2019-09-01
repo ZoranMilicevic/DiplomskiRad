@@ -41,9 +41,9 @@ public class DGH {
                     tree = new Tree(root, ars.size());
                 }
                 else if(tree.bfsSearch(s) == null){
-                    Node parrent = tree.bfsSearch(ars.get(i+1));
-                    Node node = new Node(s, parrent, ars.size()- i - 1);
-                    tree.insert(parrent, node);
+                    Node parent = tree.bfsSearch(ars.get(i+1));
+                    Node node = new Node(s, parent, ars.size()- i - 1);
+                    tree.insert(parent, node);
                 }
             }
         }
