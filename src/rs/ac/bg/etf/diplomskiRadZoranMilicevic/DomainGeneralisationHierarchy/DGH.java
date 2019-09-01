@@ -1,8 +1,6 @@
 package rs.ac.bg.etf.diplomskiRadZoranMilicevic.DomainGeneralisationHierarchy;
 
 import rs.ac.bg.etf.diplomskiRadZoranMilicevic.Data.GeneralisationTable;
-import rs.ac.bg.etf.diplomskiRadZoranMilicevic.Tree.Node;
-import rs.ac.bg.etf.diplomskiRadZoranMilicevic.Tree.Tree;
 
 import java.util.ArrayList;
 

@@ -6,9 +6,10 @@ public class Frequency {
     private int occurrences;
     private ArrayList<Integer> rowIndexList;
 
-    public Frequency() {
-        this.occurrences = 0;
+    public Frequency(int rowNum) {
+        this.occurrences = 1;
         this.rowIndexList = new ArrayList<>();
+        this.rowIndexList.add(rowNum);
     }
 
     public Frequency(int occurrences, ArrayList<Integer> rowIndexList) {

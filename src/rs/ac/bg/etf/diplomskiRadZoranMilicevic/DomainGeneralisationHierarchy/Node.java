@@ -1,4 +1,4 @@
-package rs.ac.bg.etf.diplomskiRadZoranMilicevic.Tree;
+package rs.ac.bg.etf.diplomskiRadZoranMilicevic.DomainGeneralisationHierarchy;
 
 
 import java.util.ArrayList;

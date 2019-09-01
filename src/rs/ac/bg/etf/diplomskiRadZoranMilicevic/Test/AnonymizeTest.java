@@ -4,11 +4,12 @@ import rs.ac.bg.etf.diplomskiRadZoranMilicevic.Algorithm.Anonymize;
 import rs.ac.bg.etf.diplomskiRadZoranMilicevic.Data.GeneralisationTable;
 import rs.ac.bg.etf.diplomskiRadZoranMilicevic.Data.QuasiIdentifiers;
 import rs.ac.bg.etf.diplomskiRadZoranMilicevic.DomainGeneralisationHierarchy.DGH;
-import rs.ac.bg.etf.diplomskiRadZoranMilicevic.Tree.Node;
+import rs.ac.bg.etf.diplomskiRadZoranMilicevic.DomainGeneralisationHierarchy.Node;
 
 import java.io.*;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.Queue;
 
 public class AnonymizeTest {
@@ -17,21 +18,21 @@ public class AnonymizeTest {
     public static void main(String[] args) {
         ArrayList<DGH> dgh = new ArrayList<>();
         dgh.add(readFileAndGenerateDGH(directory + "\\age.csv"));
-        dgh.add(readFileAndGenerateDGH(directory + "\\city.csv"));
-        dgh.add(readFileAndGenerateDGH(directory + "\\zip.csv"));
+        //dgh.add(readFileAndGenerateDGH(directory + "\\city.csv"));
+        //dgh.add(readFileAndGenerateDGH(directory + "\\zip.csv"));
 
         ArrayList<ArrayList<String>> data = readFileData(directory+"\\data.csv").getGenTable();
         ArrayList<ArrayList<String>> quasiIdentifiers = new ArrayList<>();
 
         for(ArrayList<String> row : data){
             ArrayList<String> newRow = new ArrayList<>();
-            for(int i = 1; i<row.size()-1; i++)newRow.add(row.get(i));
+            newRow.add(row.get(1));
             quasiIdentifiers.add(newRow);
         }
 
         System.out.println("Start anonymizing");
 
-        Anonymize.anonymize(2, new QuasiIdentifiers(quasiIdentifiers), dgh);
+        Anonymize.anonymize(3, new QuasiIdentifiers(quasiIdentifiers), dgh);
 
         printTable(directory+ "\\anon.csv", data, quasiIdentifiers);
 

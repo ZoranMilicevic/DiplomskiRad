@@ -3,20 +3,15 @@ package rs.ac.bg.etf.diplomskiRadZoranMilicevic.Algorithm;
 import rs.ac.bg.etf.diplomskiRadZoranMilicevic.Data.QuasiIdentifiers;
 import rs.ac.bg.etf.diplomskiRadZoranMilicevic.DomainGeneralisationHierarchy.DGH;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class Anonymize {
-    //quasiIdentifiers is an ArrayList<ArrayList<String>>
-    //where ArrayList<String> is one COLUMN from the table
-    //so it's essentially an list of columns
     public static void anonymize(int k, QuasiIdentifiers quasiIdentifiers, ArrayList<DGH> dghList){
         Map<ArrayList<String>, Frequency> qi_frequency = new HashMap<>();
         Map<Integer, Set<String>> domains = new HashMap<>();
-        Map<Integer, Integer> gen_levels = new HashMap<>();
 
         for(int i=0; i<quasiIdentifiers.getNUmberOfColumns(); i++)domains.put(i, new HashSet<>());
-
-        for(int i = 0; i<quasiIdentifiers.getNUmberOfColumns(); i++) gen_levels.put(i, 0);
 
         for(int i =0; i<quasiIdentifiers.getNumberOfRows(); i++){
             ArrayList<String> row = quasiIdentifiers.getRow(i);
@@ -25,7 +20,7 @@ public class Anonymize {
                 qi_frequency.get(row).insertRowNumber(i);
             }
             else{
-                qi_frequency.put(row, new Frequency());
+                qi_frequency.put(row, new Frequency(i));
                 for(int j = 0; j<row.size(); j++){
                     String value = row.get(j);
                     domains.get(j).add(value);
@@ -43,7 +38,7 @@ public class Anonymize {
 
             if(numberOfNonKanonTuples > k){
                 //find attribute with max cardinality
-                int maxCardinality = 0;
+                int maxCardinality = -1;
                 int maxAttributeIndex = -1;
                 for(int index = 0; index<domains.size(); index++){
                     int curCardinality = domains.get(index).size();
@@ -54,7 +49,6 @@ public class Anonymize {
                 }
 
                 //generalise values in that attribute
-
                 //reset the domain of that attribute
                 domains.remove(maxAttributeIndex);
                 domains.put(maxAttributeIndex, new HashSet<>());
@@ -97,9 +91,6 @@ public class Anonymize {
                     domains.get(maxAttributeIndex).add(generalisedAttributeValue);
                 }
 
-                int p = gen_levels.get(maxAttributeIndex);
-                gen_levels.remove(maxAttributeIndex);
-                gen_levels.put(maxAttributeIndex, p+1);
             }
             //the rest that remains -> suppress
             else{
@@ -111,6 +102,7 @@ public class Anonymize {
                 break;
             }
         }
-
+        int o = 1;
+        o++;
     }
 }
