@@ -32,10 +32,10 @@ public class AnonymizeTest {
 
         System.out.println("Start anonymizing");
 
-        Anonymize.anonymize(3, new QuasiIdentifiers(quasiIdentifiers), dgh);
+        Anonymize.anonymize(2, dgh, new QuasiIdentifiers(quasiIdentifiers));
 
         printTable(directory+ "\\anon.csv", data, quasiIdentifiers);
-
+        System.out.println("End");
 
 
     }
@@ -117,9 +117,9 @@ public class AnonymizeTest {
 
                 fw.append(d.get(0)); fw.append(',');
                 fw.append(q.get(0)); fw.append(',');
-                fw.append(q.get(1)); fw.append(',');
-                fw.append(q.get(2)); fw.append(',');
-                fw.append(d.get(4)); fw.append('\n');
+                fw.append(d.get(1)); fw.append(',');
+                fw.append(d.get(2)); fw.append(',');
+                fw.append(d.get(3)); fw.append('\n');
             }
             fw.close();
 

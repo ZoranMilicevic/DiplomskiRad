@@ -33,7 +33,7 @@ public class QuasiIdentifiers {
     public void supress(ArrayList<Integer> rowNumberList){
         for(int i: rowNumberList) {
             ArrayList<String> row = quasiIdentifiersByRows.get(i);
-            for(String s:row)s="*";
+            for(int j = 0; j<row.size(); j++)row.set(j, "*");
         }
     }
 }
