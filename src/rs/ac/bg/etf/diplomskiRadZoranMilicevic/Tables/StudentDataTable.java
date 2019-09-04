@@ -12,17 +12,17 @@ public class StudentDataTable {
     public static final String genderValuesFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\Values\\Gender.txt";
     public static final String moduleValuesFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\Values\\Module.txt";
     public static final String indexNumberValuesFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\Values\\IndexNumber.txt";
+    public static final String studyYearValuesFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\Values\\StudyYear.txt";
     public static final String phoneNumberValuesFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\Values\\Phone.txt";
-    public static final String studyYearValuesFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\Values\\StudyYear";
     public static final String jmbgValuesFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\Values\\JMBG.txt";
     public static final String[] valueFilesDirectories = {ageValuesFile, placesValuesFile, gpaValuesFile, genderValuesFile,
-            moduleValuesFile, indexNumberValuesFile, phoneNumberValuesFile, studyYearValuesFile, jmbgValuesFile};
-    public static final String randomTablesDirectory = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\RandomTables\\anonTable";
-    public static final String anonTablesDirecotry = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\AnonymisedTables\\table";
+            moduleValuesFile, indexNumberValuesFile, studyYearValuesFile, phoneNumberValuesFile, jmbgValuesFile};
+    public static final String randomTablesDirectory = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\RandomTables\\table";
+    public static final String anonTablesDirecotry = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\AnonymisedTables\\anonTable";
     public static int ID = 0;
     public static int IDANON = 0;
     public static StudentDataTable lastGeneratedRandomTable = null;
-    public static String[] attributes = {"0. Age", "1. City", "2. GPA", "3. Gender", "4. Module", "5. Student Index Number", "6. Phone Number", "7. Study Year", "8. JMBG"};
+    public static String[] attributes = {"0. Age", "1. City", "2. GPA", "3. Gender", "4. Module", "5. Student Index Number", "6. Study Year", "7. Phone Number", "8. JMBG"};
 
     ArrayList<ArrayList<String>> table;
 
@@ -64,11 +64,9 @@ public class StudentDataTable {
         }
     }
 
-    public void printAnonTableToFile(String[] indexes, QuasiIdentifiers qi){
-        String fileName = anonTablesDirecotry + IDANON++;
-        ArrayList<Integer> indexArray = new ArrayList<>();
+    public void printAnonTableToFile(ArrayList<Integer> indexArray, QuasiIdentifiers qi){
+        String fileName = anonTablesDirecotry + IDANON++ + ".csv";
 
-        for(String s: indexes)indexArray.add(Integer.parseInt(s));
         try {
             PrintWriter pw = new PrintWriter(fileName);
             for(int i=0; i<table.size(); i++){
@@ -83,24 +81,22 @@ public class StudentDataTable {
                 }
                 pw.write("\n");
             }
+            pw.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 
     }
 
-    public QuasiIdentifiers createQuasiIdentifiersTable(String[] indexes){
+    public QuasiIdentifiers createQuasiIdentifiersTable(ArrayList<Integer> indexArray){
         QuasiIdentifiers qi = new QuasiIdentifiers();
-        ArrayList<Integer> indexArray = new ArrayList<>();
-
-        for(String s: indexes)indexArray.add(Integer.parseInt(s));
 
         for(ArrayList<String> row: table){
             ArrayList<String> newRow = new ArrayList<>();
             for(int i:indexArray){
                 newRow.add(row.get(i));
             }
-            qi.insertRow(row);
+            qi.insertRow(newRow);
         }
 
         return qi;
@@ -143,7 +139,7 @@ public class StudentDataTable {
             table.insertRow(row);
         }
 
-        table.printDataTableToFile(randomTablesDirectory + Integer.toString(ID++));
+        table.printDataTableToFile(randomTablesDirectory + Integer.toString(ID++) + ".csv");
 
         lastGeneratedRandomTable = table;
     }

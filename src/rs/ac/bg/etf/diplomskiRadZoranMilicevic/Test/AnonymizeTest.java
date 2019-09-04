@@ -14,12 +14,7 @@ public class AnonymizeTest {
 
     public static void main(String[] args) {
         ArrayList<DGH> dgh = DGH.generateAllDGH();
-
         simulation(dgh);
-
-        ArrayList<ArrayList<String>> quasiIdentifiers = new ArrayList<>();
-
-
     }
 
     public static void simulation(ArrayList<DGH> dgh){
@@ -50,12 +45,12 @@ public class AnonymizeTest {
     }
 
     public static void printMenu(){
-        System.out.println("Possible options: \n");
-        System.out.println("\t 1. Generate random table \n");
-        System.out.println("\t 2. Generate and Anonymise random table \n");
-        System.out.println("\t 3. Anonymise last randomly generated table \n");
-        System.out.println("\t 4. Anonymise a specified table \n");
-        System.out.println("\t 5. Exit \n");
+        System.out.println("Possible options:");
+        System.out.println("\t 1. Generate random table");
+        System.out.println("\t 2. Generate and Anonymise random table");
+        System.out.println("\t 3. Anonymise last randomly generated table");
+        System.out.println("\t 4. Anonymise a specified table");
+        System.out.println("\t 5. Exit");
         System.out.println("------------------------------------------");
         System.out.print("Your desired option is: ");
     }
@@ -78,18 +73,22 @@ public class AnonymizeTest {
         System.out.println("Input the desired value of the parameter k: ");
         int k = sc.nextInt();
 
-        System.out.println("Input in one line, which attributes are quasi identifiers: ");
+        System.out.println("Input in one line, which attributes are quasi identifiers, input -1 for end: ");
         StudentDataTable.printAttributes();
 
-        String attributeIndexes = sc.nextLine();
-        String attributeIndexesList[] = attributeIndexes.split(" ");
-        QuasiIdentifiers qi = StudentDataTable.lastGeneratedRandomTable.createQuasiIdentifiersTable(attributeIndexesList);
+        ArrayList<Integer> attList = new ArrayList<>();
+        int a = sc.nextInt();
+        while(a!=-1){
+            attList.add(a);
+            a = sc.nextInt();
+        }
+        QuasiIdentifiers qi = StudentDataTable.lastGeneratedRandomTable.createQuasiIdentifiersTable(attList);
 
         System.out.println("Stared anonymising");
         Anonymize.anonymize(k, dgh, qi);
         System.out.println("Anonymisation done!");
 
-        StudentDataTable.lastGeneratedRandomTable.printAnonTableToFile(attributeIndexesList, qi);
+        StudentDataTable.lastGeneratedRandomTable.printAnonTableToFile(attList, qi);
     }
 
     public static void option4(ArrayList<DGH> dgh){

@@ -7,19 +7,19 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class GeneralisationTable {
-    public static final String ageGeneralisationTableFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\GeneralisationTables\\Age.xlxs";
-    public static final String placesGeneralisationTableFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\GeneralisationTables\\City.xlxs";
-    public static final String gpaGeneralisationTableFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\GeneralisationTables\\Gpa.xlxs";
-    public static final String genderGeneralisationTableFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\GeneralisationTables\\Gender.xlxs";
-    public static final String moduleGeneralisationTableFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\GeneralisationTables\\Module.xlxs";
-    public static final String indexGeneralisationTableFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\GeneralisationTables\\IndexNumber.xlxs";
-    public static final String phoneNumberGeneralisationTableFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\GeneralisationTables\\Phone.xlxs";
-    public static final String studyYearGeneralisationTableFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\GeneralisationTables\\StudyYear.xlxs";
-    public static final String jmbgGeneralisationTableFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\GeneralisationTables\\JMBG.xlxs";
+    public static final String ageGeneralisationTableFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\GeneralisationTables\\Age.csv";
+    public static final String placesGeneralisationTableFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\GeneralisationTables\\City.csv";
+    public static final String gpaGeneralisationTableFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\GeneralisationTables\\Gpa.csv";
+    public static final String genderGeneralisationTableFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\GeneralisationTables\\Gender.csv";
+    public static final String moduleGeneralisationTableFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\GeneralisationTables\\Module.csv";
+    public static final String indexGeneralisationTableFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\GeneralisationTables\\IndexNumber.csv";
+    public static final String studyYearGeneralisationTableFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\GeneralisationTables\\StudyYear.csv";
+    public static final String phoneNumberGeneralisationTableFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\GeneralisationTables\\Phone.csv";
+    public static final String jmbgGeneralisationTableFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\GeneralisationTables\\JMBG.csv";
     public static final String[] generalisationTableFiles = {ageGeneralisationTableFile, placesGeneralisationTableFile,
             gpaGeneralisationTableFile, genderGeneralisationTableFile, moduleGeneralisationTableFile,
-            indexGeneralisationTableFile, phoneNumberGeneralisationTableFile, studyYearGeneralisationTableFile,
-            jmbgGeneralisationTableFile};
+            indexGeneralisationTableFile, studyYearGeneralisationTableFile,};
+            //phoneNumberGeneralisationTableFile, jmbgGeneralisationTableFile};
 
     private ArrayList<ArrayList<String>> genTable;
 
