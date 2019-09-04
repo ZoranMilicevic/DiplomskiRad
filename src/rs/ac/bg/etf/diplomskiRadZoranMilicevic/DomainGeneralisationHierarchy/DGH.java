@@ -50,4 +50,13 @@ public class DGH {
         else return null;
     }
 
+    public static ArrayList<DGH> generateAllDGH(){
+        ArrayList<DGH> dghList = new ArrayList<>();
+        for(String fileName: GeneralisationTable.generalisationTableFiles){
+            GeneralisationTable genTab = GeneralisationTable.readFileData(fileName);
+            dghList.add(DGH.generateDGH(genTab));
+        }
+        return  dghList;
+    }
+
 }

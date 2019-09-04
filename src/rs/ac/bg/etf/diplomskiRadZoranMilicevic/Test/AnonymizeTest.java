@@ -1,111 +1,99 @@
 package rs.ac.bg.etf.diplomskiRadZoranMilicevic.Test;
 
 import rs.ac.bg.etf.diplomskiRadZoranMilicevic.Algorithm.Anonymize;
-import rs.ac.bg.etf.diplomskiRadZoranMilicevic.Data.GeneralisationTable;
 import rs.ac.bg.etf.diplomskiRadZoranMilicevic.Data.QuasiIdentifiers;
 import rs.ac.bg.etf.diplomskiRadZoranMilicevic.DomainGeneralisationHierarchy.DGH;
-import rs.ac.bg.etf.diplomskiRadZoranMilicevic.DomainGeneralisationHierarchy.Node;
+import rs.ac.bg.etf.diplomskiRadZoranMilicevic.Tables.StudentDataTable;
 
 import java.io.*;
-import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Map;
-import java.util.Queue;
+import java.util.Scanner;
 
 public class AnonymizeTest {
-    public static final String directory = "C:\\Users\\Zoran Milicevic\\Desktop";
+    public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        ArrayList<DGH> dgh = new ArrayList<>();
-        dgh.add(readFileAndGenerateDGH(directory + "\\age.csv"));
-        //dgh.add(readFileAndGenerateDGH(directory + "\\city.csv"));
-        //dgh.add(readFileAndGenerateDGH(directory + "\\zip.csv"));
+        ArrayList<DGH> dgh = DGH.generateAllDGH();
 
-        ArrayList<ArrayList<String>> data = readFileData(directory+"\\data.csv").getGenTable();
+        simulation(dgh);
+
         ArrayList<ArrayList<String>> quasiIdentifiers = new ArrayList<>();
 
-        for(ArrayList<String> row : data){
-            ArrayList<String> newRow = new ArrayList<>();
-            newRow.add(row.get(1));
-            quasiIdentifiers.add(newRow);
-        }
-
-        System.out.println("Start anonymizing");
-
-        Anonymize.anonymize(2, dgh, new QuasiIdentifiers(quasiIdentifiers));
-
-        printTable(directory+ "\\anon.csv", data, quasiIdentifiers);
-        System.out.println("End");
-
 
     }
 
-    public static DGH readFileAndGenerateDGH(String fileName){
-        try {
-            FileReader fr = new FileReader(fileName);
-            BufferedReader br = new BufferedReader(fr);
-            String line = br.readLine();
-            ArrayList<ArrayList<String>> values = new ArrayList<>();
-            while(line!=null){
-                String[] tokens = line.split(",");
-                ArrayList<String> lineTokens = new ArrayList<>();
-                for(String token:tokens){
-                    lineTokens.add(token);
-                }
-                values.add(lineTokens);
-                line = br.readLine();
+    public static void simulation(ArrayList<DGH> dgh){
+        printMenu();
+        int o = sc.nextInt();
+        while(o!=5){
+            switch (o){
+                case 1:
+                    option1(dgh);
+                    break;
+                case 2:
+                    option2(dgh);
+                    break;
+                case 3:
+                    option3(dgh);
+                    break;
+                case 4:
+                    option4(dgh);
+                    break;
+                case 5: return;
+                default: System.out.println("This option does not exist");
             }
 
-            DGH dgh = DGH.generateDGH(new GeneralisationTable(values));
-            return dgh;
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+            printMenu();
+            o=sc.nextInt();
         }
-        return null;
+        System.out.println("Done. Exiting.");
     }
 
-    public static GeneralisationTable readFileData(String fileName){
-        try {
-            FileReader fr = new FileReader(fileName);
-            BufferedReader br = new BufferedReader(fr);
-            String line = br.readLine();
-            ArrayList<ArrayList<String>> values = new ArrayList<>();
-            while(line!=null){
-                String[] tokens = line.split(",");
-                ArrayList<String> lineTokens = new ArrayList<>();
-                for(String token:tokens){
-                    lineTokens.add(token);
-                }
-                values.add(lineTokens);
-                line = br.readLine();
-            }
-            return new GeneralisationTable(values);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
+    public static void printMenu(){
+        System.out.println("Possible options: \n");
+        System.out.println("\t 1. Generate random table \n");
+        System.out.println("\t 2. Generate and Anonymise random table \n");
+        System.out.println("\t 3. Anonymise last randomly generated table \n");
+        System.out.println("\t 4. Anonymise a specified table \n");
+        System.out.println("\t 5. Exit \n");
+        System.out.println("------------------------------------------");
+        System.out.print("Your desired option is: ");
     }
 
+    public static void option1(ArrayList<DGH> dgh){
+        System.out.print("Input desired number of entries in the random table: ");
+        int num = sc.nextInt();
+        StudentDataTable.createRandomStudentTable(num);
+    }
 
-    public static void printTree(Node root){
-        Queue<Node> visited = new ArrayDeque<>();
-        Queue<Node> unvisited = new ArrayDeque<>();
+    public static void option2(ArrayList<DGH> dgh){
+        System.out.print("Input desired number of entries in the random table: ");
+        int num = sc.nextInt();
+        StudentDataTable.createRandomStudentTable(num);
+        System.out.println("Random table created!");
+        option3(dgh);
+    }
 
-        visited.add(root);
-        unvisited.add(root);
+    public static void option3(ArrayList<DGH> dgh){
+        System.out.println("Input the desired value of the parameter k: ");
+        int k = sc.nextInt();
 
-        while(!unvisited.isEmpty()){
-            Node current = unvisited.remove();
-            visited.add(current);
-            System.out.println(current.getData() + " " + current.getDepth());
-            for(Node n: current.getChildren()){
-                if(!visited.contains(n)) unvisited.add(n);
-            }
-        }
+        System.out.println("Input in one line, which attributes are quasi identifiers: ");
+        StudentDataTable.printAttributes();
+
+        String attributeIndexes = sc.nextLine();
+        String attributeIndexesList[] = attributeIndexes.split(" ");
+        QuasiIdentifiers qi = StudentDataTable.lastGeneratedRandomTable.createQuasiIdentifiersTable(attributeIndexesList);
+
+        System.out.println("Stared anonymising");
+        Anonymize.anonymize(k, dgh, qi);
+        System.out.println("Anonymisation done!");
+
+        StudentDataTable.lastGeneratedRandomTable.printAnonTableToFile(attributeIndexesList, qi);
+    }
+
+    public static void option4(ArrayList<DGH> dgh){
+
     }
 
     public static void printTable(String fileName, ArrayList<ArrayList<String>> data, ArrayList<ArrayList<String>> quasi){
@@ -116,9 +104,11 @@ public class AnonymizeTest {
                 ArrayList<String> q = quasi.get(i);
 
                 fw.append(d.get(0)); fw.append(',');
+
                 fw.append(q.get(0)); fw.append(',');
-                fw.append(d.get(1)); fw.append(',');
+                fw.append(q.get(1)); fw.append(',');
                 fw.append(d.get(2)); fw.append(',');
+
                 fw.append(d.get(3)); fw.append('\n');
             }
             fw.close();

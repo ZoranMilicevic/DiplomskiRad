@@ -76,4 +76,21 @@ public class Tree {
         if(n!=null)return n.getParent();
         else return null;
     }
+
+    public void printTree(){
+        Queue<Node> visited = new ArrayDeque<>();
+        Queue<Node> unvisited = new ArrayDeque<>();
+
+        visited.add(root);
+        unvisited.add(root);
+
+        while(!unvisited.isEmpty()){
+            Node current = unvisited.remove();
+            visited.add(current);
+            System.out.println(current.getData() + " " + current.getDepth());
+            for(Node n: current.getChildren()){
+                if(!visited.contains(n)) unvisited.add(n);
+            }
+        }
+    }
 }

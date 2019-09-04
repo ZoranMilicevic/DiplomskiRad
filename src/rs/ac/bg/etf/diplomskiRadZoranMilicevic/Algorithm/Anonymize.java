@@ -3,7 +3,6 @@ package rs.ac.bg.etf.diplomskiRadZoranMilicevic.Algorithm;
 import rs.ac.bg.etf.diplomskiRadZoranMilicevic.Data.QuasiIdentifiers;
 import rs.ac.bg.etf.diplomskiRadZoranMilicevic.DomainGeneralisationHierarchy.DGH;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class Anonymize {
@@ -69,21 +68,24 @@ public class Anonymize {
                             }
                         }
                         qi_frequency=qi_frequency2;
-                        entrySet = qi_frequency.entrySet();
+                        //entrySet = qi_frequency.entrySet();
                     }
 
                     //insert the generalised value into that attributes domain
                     domains.get(maxAttributeIndex).add(generalisedAttributeValue);
                 }
+
             }
-            //the rest that remains -> suppress
+            //the rest that remain -> suppress
             else{
                 suppressTheRest(k, quasiIdentifiers, qi_frequency);
+                updateValuesInQuasiIdentifiers(quasiIdentifiers, qi_frequency);
                 break;
             }
         }
-
     }
+
+    //---------------------------------------------------------------------------------------------------
 
     private static Map<ArrayList<String>, Frequency> createQi_Frequency(QuasiIdentifiers quasiIdentifiers, Map<Integer, Set<String>> domains){
         Map<ArrayList<String>, Frequency> qi_frequency = new HashMap<>();
@@ -132,6 +134,15 @@ public class Anonymize {
             if(entry.getValue().getOccurrences()<k){
                 quasiIdentifiers.supress(entry.getValue().getRowIndexList());
             }
+        }
+    }
+
+    private static void updateValuesInQuasiIdentifiers(QuasiIdentifiers quasiIdentifiers, Map<ArrayList<String>, Frequency> qi_frequency){
+        Set<Map.Entry<ArrayList<String>, Frequency>> entrySet = qi_frequency.entrySet();
+        for(Map.Entry<ArrayList<String>, Frequency> entry:entrySet){
+            ArrayList<String> key = entry.getKey();
+            ArrayList<Integer> rowIndexList = entry.getValue().getRowIndexList();
+            quasiIdentifiers.updateValues(rowIndexList, key);
         }
     }
 }
