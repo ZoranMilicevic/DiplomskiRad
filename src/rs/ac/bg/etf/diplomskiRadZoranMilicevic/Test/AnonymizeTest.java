@@ -92,29 +92,30 @@ public class AnonymizeTest {
     }
 
     public static void option4(ArrayList<DGH> dgh){
+        System.out.println("Input the desired value of the parameter k: ");
+        int k = sc.nextInt();
 
-    }
+        System.out.println("Input in one line, which attributes are quasi identifiers, input -1 for end: ");
+        StudentDataTable.printAttributes();
 
-    public static void printTable(String fileName, ArrayList<ArrayList<String>> data, ArrayList<ArrayList<String>> quasi){
-        try {
-            PrintWriter fw = new PrintWriter(new File(fileName));
-            for(int i = 0; i<data.size(); i++){
-                ArrayList<String> d = data.get(i);
-                ArrayList<String> q = quasi.get(i);
-
-                fw.append(d.get(0)); fw.append(',');
-
-                fw.append(q.get(0)); fw.append(',');
-                fw.append(q.get(1)); fw.append(',');
-                fw.append(d.get(2)); fw.append(',');
-
-                fw.append(d.get(3)); fw.append('\n');
-            }
-            fw.close();
-
-        } catch (IOException e) {
-            e.printStackTrace();
+        ArrayList<Integer> attList = new ArrayList<>();
+        int a = sc.nextInt();
+        while(a!=-1){
+            attList.add(a);
+            a = sc.nextInt();
         }
 
+        System.out.print("Input the path to the file: ");
+        String fileName = sc.next();
+        StudentDataTable.lastGeneratedRandomTable = StudentDataTable.readFileData(fileName);
+
+        QuasiIdentifiers qi = StudentDataTable.lastGeneratedRandomTable.createQuasiIdentifiersTable(attList);
+
+        System.out.println("Stared anonymising");
+        Anonymize.anonymize(k, dgh, qi);
+        System.out.println("Anonymisation done!");
+
+        StudentDataTable.lastGeneratedRandomTable.printAnonTableToFile(attList, qi);
     }
+
 }
