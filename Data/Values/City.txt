@@ -1,0 +1,1109 @@
+Barajevo
+Baric
+Barosevac
+Beli Potok
+Beljina
+Beograd
+Velika Ivanca
+Velika Krsna
+Velika Mostanica
+Veliki Borak
+Veliki Crljeni
+Vlaska
+Vranic
+Vreoci
+Grabovac
+Drazevac
+Dudovica
+Zabrezje
+Zuce
+Jagnjilo
+Junkovac
+Kaludjerica
+Kovacevac
+Koracica
+Lazarevac
+Mala Mostanica
+Mali Pozarevac
+Medjuluzje
+Meljak
+Mirosaljci
+Mladenovac
+Obrenovac
+Ostruznica
+Pinosava
+Pruzatovac
+Ralja
+Ripanj
+Rogaca
+Rudovci
+Rusanj
+Skela
+Sopot
+Sremcica
+Stepojevac
+Stubline
+Umka
+Osipaonica
+Azanja
+Velika Plana
+Veliko Orasje
+Vodanj
+Vranovo
+Golobok
+Drugovac
+Kolari
+Krnjevo
+Kusadak
+Lipe
+Lozovik
+Lugavcina
+Mala Krsna
+Markovac
+Milosevac
+Mihajlovac
+Radinac
+Ratari
+Saraorci
+Selevac
+Skobalj
+Smederevska Palanka
+Smederevo
+Staro Selo
+Bagrdan
+Belusic
+Bigrenica
+Bobovo
+Bunar
+Busilovac
+Veliki Popovic
+Vojska
+Glavinci
+Glogovac
+Despotovac
+Donja Mutnica
+Donje Vidovo
+Dragovo
+Dragocvet
+Dragosevac
+Drenovac
+Duboka
+Jagodina
+Jasenovo
+Jovac
+Kolare
+Koncarevo
+Krusar
+Kusiljevo
+Locika
+Majur
+Medvedja
+Mijatovac
+Milosevo
+Oparic
+Paracin
+Plazane
+Plana
+Popovac
+Potocac
+Prevest
+Rasevica
+Rekovac
+Resavica
+Ribare
+Svilajnac
+Svojnovo
+Sedlare
+Senje
+Senjski Rudnik
+Sikirica
+Siokovac
+Stenjevac
+Stubica
+Subotica (kod Svijanca)
+Supska
+Tresnjevica
+cuprija
+Aleksandrovac
+Bacina
+Bela Voda
+Blazevo
+Bosnjane
+Brzece
+Brus
+Varvarin
+Velika Vrbnica
+Velika Drenova
+Velika Lomnica
+Veliki siljegovac
+Globoder
+Gornje Dvorane
+Gornji Stepos
+Gornji Stupanj
+Donji Krcin
+djunis
+Zdravinje
+Jasika
+Jasikovica
+Kaonik
+Konjuh
+Krusevac
+Kukljin
+Kupci
+Lepenac
+Medvedja
+Milentija
+Milutovac
+Obrez
+Padez
+Parunovac
+Pepeljevac
+Ples
+Pojate
+Pocekovina
+Razbojna
+Rataje
+Ribarska Banja
+Stalac
+Stopanja
+Trnavci
+Trstenik
+cicevac
+citluk
+Rudnica
+Adrani
+Baljevac
+Bogutovac
+Brvenik
+Vitanovac
+Vitkovac
+Vrba
+Vrnjacka Banja
+Vrnjci
+Dezeva
+Delimedje
+zica
+Josanicka Banja
+Konarevo
+Kopaonik
+Kraljevo
+Ladjevci
+Lukare
+Mataruska Banja
+Novi Pazar
+Novo Selo
+Podunavci
+Ratina
+Raska
+Ribarice
+Rocevici
+Rudno
+Samaila
+Sirca
+Studenica
+Tutin
+Usce
+Crkvine
+cukojevac
+Arandjelovac
+Badnjevac
+Banja
+Bare
+Batocina
+Belosavci
+Belosevac
+Brzan
+Bukovik
+Bukorovac
+Vencane
+Gornja Sabanta
+Gornja Trnava
+Grosnica
+Gruza
+Guberevac
+Darosava
+Desimirovac
+Divostin
+Donja satornja
+Dragobraca
+Erdec
+zirovnica
+Zabojnica
+Ilicevo
+Jarmenovci
+Jelovik
+Jovanovac
+Knic
+Korman
+Kragujevac
+Lapovo
+Lapovo (Varos)
+Luznice
+Male Pcelice
+Malo Krcmare
+Marsic
+Milatovac
+Natalinci
+Orasac
+Ranilovic
+Raca Kragujevacka
+Resnik
+Sipic
+Stojnik
+Stragari
+Topola
+Toponica
+cumic
+Bor
+Borski Brestovac
+Bracevac
+Brestovacka Banja
+Brza Palanka
+Velesnica
+Grabovica
+Donja Bela Reka
+Donji Milanovac
+Zlot
+Jabukovac
+Jasikovo
+Kladovo
+Klokocevac
+Kobisnica
+Korbovo
+Krivelj
+Majdanpek
+Metovnica
+Mihajlovac
+Negotin
+Ostrelj
+Plavna
+Podvrska
+Prahovo
+Radujevac
+Rogljevo
+Rudna Glava
+Sikole
+Sip
+Slatina
+Tekija
+Trnjane
+Urovica
+Aleksandrovac
+Bare
+Bozevac
+Bradarac
+Branicevo
+Burovac
+Veliko Gradiste
+Veliko Laole
+Voluja
+Vukovac
+Golubac
+Dobra
+Duboka
+Dubravica
+zabari
+zagubica
+Klenje
+Klicevac
+Kostolac
+Krepoljin
+Kucevo
+Laznica
+Majilovac
+Malo Crnice
+Neresnica
+Oreskovica
+Osanica
+Petrovac
+Pozarevac
+Poljana
+Porodin
+Rabrovo
+Ranovac
+Rasanac
+Smoljinac
+Srednjevo
+Topolovnik
+Turija
+Beli Potok
+Bogovina
+Boljevac
+Brusnik
+Bucje
+Vasilj
+Velika Jasikova
+Veliki Izvor
+Vina
+Vrazogrnac
+Vratarnica
+Gamzigradska Banja
+Gradskovo
+Grliste
+Grljan
+Donja Kamenica
+Donje Zunice
+Dubocane
+Dugo Polje
+Zajecar
+Zvezdan
+Josanica
+Kalna
+Knjazevac
+Koprivnica
+Krivi Vir
+Lenovac
+Lubnica
+Lukovo
+Mali Izvor
+Mali Jasenovac
+Minicevo
+Nikolicevo
+Podvis
+Podgorac
+Rgotina
+Savinac
+Salas
+Sokobanja
+Sumrakovac
+citluk
+Bogojevce
+Bojnik
+Bosnjace
+Brestovac
+Velika Grabovnica
+Vlasotince
+Vucje
+Grdelica
+Guberevac
+Kosancic
+Lebane
+Leskovac
+Lece
+Manojlovce
+Medvedja
+Mirosevce
+Orane
+Pecenjevce
+Predejane
+Razgojna
+Sastav Reka
+Svodje
+Sijarinska Banja
+Tulare
+Turekovac
+Crna Trava
+Aleksinac
+Aleksinacki Rudnik
+Balajnac
+Belotinac
+Brzi Brod
+Burdimo
+Varos
+Vitosevac
+Vrmdza
+Vrcenovica
+Gadzin Han
+Gornja Toponica
+Gornji Barbes
+Gornji Matejevac
+Gusevac
+Doljevac
+Donje Medjurovo
+Donji Dusnik
+Drazevac
+zitkovac
+Zaplanjska Toponica
+Jelasnica
+Jugbogdanovac
+Katun
+Korman
+Kulina
+Lalinac
+Lalinac
+Licki Hanovi
+Malosiste
+Malca
+Medosevac
+Merosina
+Mozgovo
+Mramor
+Nis
+Nisevac
+Niska Banja
+Novi Bracin
+Novo Selo
+Ostrovica
+Prekonoga
+Pukovac
+Ravna Dubrava
+Razanj
+Rutevac
+Svrljig
+Secanica
+Sicevo
+Subotinac
+Tesica
+Trnjane
+Trupale
+cecina
+Biljaca
+Bistar
+Bozica
+Bosilegrad
+Bujanovac
+Veliki Trnovac
+Vladicin Han
+Vlase
+Vranje
+Vranjska Banja
+Gornja Lisina
+Donja Ljubata
+Donji Stajevac
+Jelasnica
+Klenike
+Klisura
+Korbevac
+Kriva Feja
+Lepenica
+Muhovac
+Presevo
+Presevo-terminal
+Priboj Vranjski
+Radovnica
+Ristovac
+Sveti Ilija
+Stubal
+Surdulica
+Trgoviste
+Dzep
+Babusnica
+Bela Palanka
+Veliko Bonjince
+Visocka Rzana
+Gnjilan
+Dimitrovgrad
+Dolac
+zeljuse
+Zvonce
+Kamenica
+Krupac
+Ljuberadja
+Pirot
+Poganovo
+Poljska Rzana
+Smilovci
+Strelac
+Sukovo
+Temska
+Crvena Reka
+Crnokliste
+Barbatovac
+Barlovo
+Beloljin
+Blace
+Velika Plana
+Gornja Dragusa
+Dobri Do
+Donja Recica
+Donja Trnava
+Donje Crnatovo
+Dubovo
+zitni Potok
+zitoradja
+zuc
+Jovanovac
+Krusevica
+Kursumlija
+Kursumlijska Banja
+Lukovska Banja
+Mala Plana
+Merdare
+Mercez
+Pejkovac
+Prokuplje
+Prolom Banja
+Raca
+Dzigolj
+Batuse
+Brezovica
+Gracanica
+Donja Gusterica
+Drajkovce
+Kosovo Polje
+Laplje Selo
+Lepina
+Plemetina
+Priluzje
+Banjska
+Zvecan
+Zubin Potok
+Kosovska Mitrovica
+Leposavic
+Lesak
+Socanica
+Vrbovac
+Kosovska Kamenica
+Partes
+Pasjane
+Ranilug
+Banostor
+Bac
+Backa Palanka
+Backi Jarak
+Backi Petrovac
+Backo Gradiste
+Backo Dobro Polje
+Backo Novo Selo
+Backo Petrovo Selo
+Begec
+Beocin
+Becej
+Bodjani
+Budisava
+Bukovac
+Vajska
+Veternik
+Vilovo
+Vrbas
+Gajdobra
+Gardinovci
+Glozan
+Gospodjinci
+Despotovo
+djurdjevo
+zabalj
+Zmajevo
+Karadjordjevo
+Kac
+Kisac
+Kovilj
+Kulpin
+Kucura
+Ledinci
+Lok
+Lug
+Maglic
+Milesevo
+Mladenovo
+Mosorin
+Nadalj
+Nestin
+Nova Gajdobra
+Novi Sad
+Obrovac
+Parage
+Petrovaradin
+Pivnice
+Plavna
+Ravno Selo
+Radicevic
+Rakovac
+Rumenka
+Savino Selo
+Selenca
+Silbas
+Sirig
+Srbobran
+Sremska Kamenica
+Sremski Karlovci
+Stepanovicevo
+Susek
+Temerin
+Titel
+Tovarisevo
+Turija
+Futog
+celarevo
+cenej
+cerevic
+curug
+Alibunar
+Bavaniste
+Banatska Palanka
+Banatska Subotica
+Banatski Brestovac
+Banatski Karlovac
+Banatsko Novo Selo
+Baranda
+Barice
+Bela Crkva
+Vatin
+Velika Greda
+Veliki Gaj
+Veliko Srediste
+Vladimirovac
+Vlajkovac
+Vojvodinci
+Vracev Gaj
+Vrsac
+Gaj
+Glogonj
+Grebenac
+Gudurica
+Debeljaca
+Devojacki Bunar
+Deliblato
+Dobrica
+Dolovo
+Dubovac
+Dupljaja
+Zagajica
+Ivanovo
+Idvor
+Izbiste
+Ilandza
+Jabuka
+Janosik
+Jasenovo
+Jermenovci
+Kacarevo
+Kovacica
+Kovin
+Kupinik
+Kusic
+Kustilj
+Lokve
+Margita
+Mileticevo
+Mramorak
+Nikolinci
+Novi Kozjak
+Omoljica
+Opovo
+Pavlis
+Padina
+Pancevo
+Plandiste
+Plocica
+Sakule
+Samos
+Seleus
+Sefkerin
+Skorenovac
+Stari Lec
+Starcevo
+Straza
+Uzdin
+Uljma
+Hajducica
+Crvena Crkva
+Crepaja
+Bajmok
+Bajsa
+Backa Topola
+Backi Vinogradi
+Backi Sokolac
+Bikovo
+Visnjevac
+Gunaros
+djurdjin
+Karadjordjevo
+Kelebija
+Kelebija gran. prelaz
+Krivaja
+Lovcenac
+Ljutovo
+Mala Bosna
+Mali Beograd
+Mali Idjos
+Misicevo
+Novi zednik
+Novo Orahovo
+Palic
+Panonija
+Pacir
+Pobeda
+Stara Moravica
+Stari zednik
+Subotica
+Tavankut
+Tomislavci
+Feketic
+Hajdukovo
+cantavir
+Ada
+Adorjan
+Banatska Topola
+Banatsko Arandjelovo
+Banatsko Veliko Selo
+Basaid
+Bogaras
+Velebit
+Vrbica
+Gornji Breg
+djala
+Idjos
+Jazovo
+Kanjiza
+Kevi
+Kikinda
+Majdan
+Male Pijace
+Martonos
+Mokrin
+Mol
+Nakovo
+Novi Knezevac
+Novi Kozarci
+Orom
+Ostojicevo
+Padej
+Rusko Selo
+Sajan
+Sanad
+Senta
+Srpski Krstur
+Tornjos
+Totovo Selo
+Tresnjevac
+Utrine
+Horgos
+Horgos granicni prelaz
+Crna Bara
+coka
+Aleksandrovo
+Aradac
+Banatska Dubica
+Banatski Dvor
+Banatski Despotovac
+Banatsko Karadjordjevo
+Belo Blato
+Boka
+Botos
+Bocar
+Vojvoda Stepa
+Elemir
+Ecka
+zitiste
+Zlatica
+Zrenjanin
+Jankov Most
+Jarkovac
+Jasa Tomic
+Klek
+Knicanin
+Konak
+Krajisnik
+Kumane
+Lazarevo
+Lukino Selo
+Lukicevo
+Medja
+Melenci
+Melenci-Rusanda
+Mihajlovo
+Muzlja
+Neuzina
+Nova Crnja
+Novi Becej
+Novi Itebej
+Novo Milosevo
+Orlovat
+Perlez
+Ravni Topolovac
+Radojevo
+Secanj
+Srpska Crnja
+Srpski Itebej
+Stajicevo
+Sutjeska
+Taras
+Toba
+Tomasevac
+Torak
+Torda
+Farkazdin
+Hetin
+centa
+cestereg
+Adasevci
+Asanja
+Banovci-Dunav
+Batrovci
+Bacinci
+Belegis
+Berkasovo
+Besenovo
+Beska
+Bikic Do
+Bingula
+Bosut
+Budjanovci
+Vasica
+Veliki Radinci
+Visnjicevo
+Voganj
+Vojka
+Vrdnik
+Gibarac
+Golubinci
+Grabovci
+Grgurevci
+Dec
+Divos
+Dobrinci
+Erdevik
+Zasavica
+Ilinci
+Indjija
+Irig
+Jazak
+Jamena
+Jarak
+Karlovcic
+Klenak
+Kraljevci
+Krnjesevci
+Krusedol
+Krcedin
+Kuzmin
+Kukujevci
+Kupinovo
+Lacarak
+Lezimir
+Ljuba
+Ljukovo
+Mandjelos
+Maradik
+Martinci
+Macvanska Mitrovica
+Molovin
+Morovic
+Nikinci
+Nova Pazova
+Novi Banovci
+Novi Karlovci
+Novi Slankamen
+Nocaj
+Obrez
+Ogar
+Pecinci
+Platicevo
+Popinci
+Privina Glava
+Prhovo
+Putinci
+Ravnje
+Ruma
+Salas Nocajski
+Sibac
+Sot
+Sremska Mitrovica
+Sremska Raca
+Sremski Mihaljevci
+Stara Pazova
+Stari Banovci
+Stari Slankamen
+Stejanovci
+Subotiste
+Surduk
+Hrtkovci
+calma
+cortanovci
+Aleksa santic
+Apatin
+Backi Breg
+Backi Brestovac
+Backi Gracac
+Backi Monostor
+Bezdan
+Bogojevo
+Gakovo
+Deronje
+Doroslovo
+Karavukovo
+Kljajicevo
+Kolut
+Kruscic
+Kula
+Kupusina
+Lalic
+Lipar
+Nova Crvenka
+Odzaci
+Prigrevica
+Rastina
+Ratkovo
+Ridjica
+Ruski Krstur
+Svetozar Miletic
+Svilojevo
+Sivac
+Sombor
+Sonta
+Srpski Miletic
+Stanisic
+Stapar
+Telecka
+Crvenka
+conoplja
+Banjani
+Belanovica
+Bogovadja
+Brankovina
+Brgule
+Brezdje
+Valjevo
+Gornja Toplica
+Divci
+Divcibare
+Dracic
+Jabucje
+Kamenica
+Komiric
+Lajkovac
+Lelic
+Ljig
+Mionica
+Osecina
+Pambukovica
+Pecka
+Popucke
+Pocuta
+Pricevic
+Radljevo
+Rajkovic
+Slavkovica
+Slovac
+Stave
+Ub
+Badovinci
+Banovo Polje
+Banja Koviljaca
+Bela Crkva
+Bogatic
+Brezjak
+Varna
+Velika Reka
+Vladimirci
+Vrhpolje
+Glusci
+Debrc
+Dobric
+Donja Borina
+Donja Orovica
+Donje Crniljevo
+Draginac
+Draginje
+Drenovac
+Dublje
+Zavlaka
+Zajaca
+Zminjak
+Jadranska Lesnica
+Kamenica
+Klenje
+Korenita
+Koceljeva
+Krupanj
+Lesnica
+Lipnicki sor
+Lipolist
+Loznica
+Ljubovija
+Majur
+Mali Zvornik
+Macvanski Pricinovic
+Metlic
+Orid
+Petlovaca
+Prnjavor (Macvanski)
+Provo
+Radalj
+Rainovaca
+Ribari
+Svileuva
+Tekeris
+Trsic
+Uzovnica
+Cerovac
+Crna Bara
+Bele Vode
+Boljkovci
+Bratljevo
+Brdjani
+Brezna
+Brezova
+Bresnica
+Bukovica
+Vionica
+Vica
+Vracevsnica
+Goracici
+Gornja Trepca
+Gornji Milanovac
+Guca
+Dragolj
+Zablace
+Ivanjica
+Jezevica
+Kaona
+Kotraza
+Kusici
+Lucani
+Markovica
+Medjurecje
+Mrcajevci
+Mrsinci
+Ovcar Banja
+Pranjani
+Preljina
+Prilicki Kiseljak
+Rudnik
+Takovo
+Trbusani
+Ugrinovci
+cacak
+Aljinovici
+Arilje
+Bajina Basta
+Banja (kod Priboja)
+Bare
+Bacevci
+Bela Zemlja
+Bioska
+Bistrica
+Bozetici
+Brekovo
+Brodarevo
+Varda
+Gornja Dobrinja
+Gostun
+Divljaka
+Draglica
+Duga Poljana
+Zlatibor
+Zlodol
+Jabuka
+Jasenovo
+Jezevica
+Jelen Do
+Karan
+Kokin Brod
+Kosjeric
+Kostojevici
+Kremna
+Lunovo Selo
+Ljubis
+Mackat
+Mitrovac
+Mokra Gora
+Nova Varos
+Perucac
+Pozega
+Priboj
+Prijepolje
+Ravni
+Razana
+Rogacica
+Roge
+Rozanstvo
+Sastavci
+Sevojno
+Seca Reka
+Sirogojno
+Sjenica
+Ugao
+Uzice
+cajetina
