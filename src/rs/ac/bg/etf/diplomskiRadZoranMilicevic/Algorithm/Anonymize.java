@@ -48,8 +48,7 @@ public class Anonymize {
                     Frequency newF = entry.getValue();
                     newQ.set(maxAttributeIndex, generalisedAttributeValue);
 
-                    //if there exists a tuple like this
-                    //TODO - shitty contains and remove doesn't work!
+                    //for all the tuples that are like the new one, read frequency data from them and update the new one
                     ArrayList<String> oldQ = null;
                     for(Map.Entry<ArrayList<String>, Frequency> entry2:entrySet){
                         if(entry2.getKey().equals(newQ) && entry2.getKey()!=newQ){
@@ -60,6 +59,7 @@ public class Anonymize {
                         }
                     }
 
+                    //remove all the old tuples
                     if(oldQ!=null){
                         Map<ArrayList<String>, Frequency> qi_frequency2 = new HashMap<>();
                         for(Map.Entry<ArrayList<String>, Frequency> entry2:entrySet) {
@@ -68,7 +68,7 @@ public class Anonymize {
                             }
                         }
                         qi_frequency=qi_frequency2;
-                        //entrySet = qi_frequency.entrySet();
+                        entrySet = qi_frequency.entrySet();
                     }
 
                     //insert the generalised value into that attributes domain

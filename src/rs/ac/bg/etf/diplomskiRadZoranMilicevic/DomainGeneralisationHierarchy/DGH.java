@@ -23,6 +23,10 @@ public class DGH {
 
     public String generalise(String data){
         Node n = tree.bfsSearch(data);
+        if(n==null){
+            System.out.println("Error, can't find the data in the dgh "+data );
+            return "error!";
+        }
         if(n.getParent()!=null)return n.getParent().getData();
         else return null;
     }

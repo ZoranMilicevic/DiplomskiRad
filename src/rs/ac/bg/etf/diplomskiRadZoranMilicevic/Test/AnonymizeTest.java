@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AnonymizeTest {
+    public static final String directory = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\RandomTables\\";
     public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -78,14 +79,16 @@ public class AnonymizeTest {
 
         ArrayList<Integer> attList = new ArrayList<>();
         int a = sc.nextInt();
+        ArrayList<DGH> newDgh = new ArrayList<>();
         while(a!=-1){
             attList.add(a);
+            newDgh.add(dgh.get(a));
             a = sc.nextInt();
         }
         QuasiIdentifiers qi = StudentDataTable.lastGeneratedRandomTable.createQuasiIdentifiersTable(attList);
 
         System.out.println("Stared anonymising");
-        Anonymize.anonymize(k, dgh, qi);
+        Anonymize.anonymize(k, newDgh, qi);
         System.out.println("Anonymisation done!");
 
         StudentDataTable.lastGeneratedRandomTable.printAnonTableToFile(attList, qi);
@@ -100,19 +103,22 @@ public class AnonymizeTest {
 
         ArrayList<Integer> attList = new ArrayList<>();
         int a = sc.nextInt();
+        ArrayList<DGH> newDgh = new ArrayList<>();
         while(a!=-1){
             attList.add(a);
+            newDgh.add(dgh.get(a));
             a = sc.nextInt();
         }
 
         System.out.print("Input the path to the file: ");
         String fileName = sc.next();
+        fileName = directory + fileName;
         StudentDataTable.lastGeneratedRandomTable = StudentDataTable.readFileData(fileName);
 
         QuasiIdentifiers qi = StudentDataTable.lastGeneratedRandomTable.createQuasiIdentifiersTable(attList);
 
         System.out.println("Stared anonymising");
-        Anonymize.anonymize(k, dgh, qi);
+        Anonymize.anonymize(k, newDgh, qi);
         System.out.println("Anonymisation done!");
 
         StudentDataTable.lastGeneratedRandomTable.printAnonTableToFile(attList, qi);

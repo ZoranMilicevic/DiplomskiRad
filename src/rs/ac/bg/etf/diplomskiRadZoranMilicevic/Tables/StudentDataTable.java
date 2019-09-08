@@ -70,9 +70,10 @@ public class StudentDataTable {
         try {
             PrintWriter pw = new PrintWriter(fileName);
             for(int i=0; i<table.size(); i++){
+                int u=0;
                 for(int j = 0; j<table.get(0).size(); j++) {
                     if (indexArray.contains(j)) {
-                        pw.write(qi.getRow(i).get(j));
+                        pw.write(qi.getRow(i).get(u++));
                         pw.write(",");
                     } else {
                         pw.write(table.get(i).get(j));
