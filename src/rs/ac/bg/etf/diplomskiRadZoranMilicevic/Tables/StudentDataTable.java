@@ -1,28 +1,28 @@
 package rs.ac.bg.etf.diplomskiRadZoranMilicevic.Tables;
 
 import rs.ac.bg.etf.diplomskiRadZoranMilicevic.Data.QuasiIdentifiers;
+import rs.ac.bg.etf.diplomskiRadZoranMilicevic.GUI.Table;
 
 import java.io.*;
 import java.util.ArrayList;
 
 public class StudentDataTable {
-    public static final String ageValuesFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\Values\\Age.txt";
-    public static final String placesValuesFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\Values\\City.txt";
-    public static final String gpaValuesFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\Values\\Gpa.txt";
-    public static final String genderValuesFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\Values\\Gender.txt";
-    public static final String moduleValuesFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\Values\\Module.txt";
-    public static final String indexNumberValuesFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\Values\\IndexNumber.txt";
-    public static final String studyYearValuesFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\Values\\StudyYear.txt";
-    public static final String phoneNumberValuesFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\Values\\Phone.txt";
-    public static final String jmbgValuesFile = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\Values\\JMBG.txt";
+    public static final String directory = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\Values\\";
+    public static final String ageValuesFile = directory + "Age.txt";
+    public static final String placesValuesFile = directory + "City.txt";
+    public static final String gpaValuesFile = directory + "Gpa.txt";
+    public static final String genderValuesFile = directory + "Gender.txt";
+    public static final String moduleValuesFile = directory + "Module.txt";
+    public static final String indexNumberValuesFile = directory + "IndexNumber.txt";
+    public static final String studyYearValuesFile = directory + "StudyYear.txt";
+    public static final String phoneNumberValuesFile = directory + "Phone.txt";
+    public static final String jmbgValuesFile = directory + "JMBG.txt";
     public static final String[] valueFilesDirectories = {ageValuesFile, placesValuesFile, gpaValuesFile, genderValuesFile,
             moduleValuesFile, indexNumberValuesFile, studyYearValuesFile, phoneNumberValuesFile, jmbgValuesFile};
-    public static final String randomTablesDirectory = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\RandomTables\\table";
-    public static final String anonTablesDirecotry = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\AnonymisedTables\\anonTable";
-    public static int ID = 0;
-    public static int IDANON = 0;
-    public static StudentDataTable lastGeneratedRandomTable = null;
-    public static String[] attributes = {"0. Age", "1. City", "2. GPA", "3. Gender", "4. Module", "5. Student Index Number", "6. Study Year", "7. Phone Number", "8. JMBG"};
+    public static final String randomTablesDirectory = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\RandomTables\\";
+    public static final String anonTablesDirecotry = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\AnonymisedTables\\";
+
+    public static String[] attributes = {"Age", "City", "GPA", "Gender", "Module", "Index Number", "Study Year", "Phone Number", "JMBG"};
 
     ArrayList<ArrayList<String>> table;
 
@@ -64,9 +64,8 @@ public class StudentDataTable {
         }
     }
 
-    public void printAnonTableToFile(ArrayList<Integer> indexArray, QuasiIdentifiers qi){
-        String fileName = anonTablesDirecotry + IDANON++ + ".csv";
-
+    public void printAnonTableToFile(ArrayList<Integer> indexArray, QuasiIdentifiers qi, String fileName){
+        fileName = anonTablesDirecotry + fileName + ".csv";
         try {
             PrintWriter pw = new PrintWriter(fileName);
             for(int i=0; i<table.size(); i++){
@@ -86,7 +85,6 @@ public class StudentDataTable {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
     }
 
     public QuasiIdentifiers createQuasiIdentifiersTable(ArrayList<Integer> indexArray){
@@ -103,7 +101,9 @@ public class StudentDataTable {
         return qi;
     }
 
-    public static StudentDataTable readFileData(String fileName){
+    public static StudentDataTable readFileData(String fileName, boolean anon){
+        if(anon)fileName = anonTablesDirecotry + fileName + ".csv";
+        else fileName = randomTablesDirectory + fileName + ".csv";
         try {
             FileReader fr = new FileReader(fileName);
             BufferedReader br = new BufferedReader(fr);
@@ -127,7 +127,7 @@ public class StudentDataTable {
         return null;
     }
 
-    public static void createRandomStudentTable(int numberOfEntries) {
+    public static StudentDataTable createRandomStudentTable(String name, int numberOfEntries) {
         StudentDataTable table = new StudentDataTable();
         ArrayList<ValuesList> valuesListsArray = new ArrayList<>();
         for(String fileName:valueFilesDirectories) valuesListsArray.add(ValuesList.readValuesFromFile(fileName));
@@ -140,15 +140,18 @@ public class StudentDataTable {
             table.insertRow(row);
         }
 
-        table.printDataTableToFile(randomTablesDirectory + Integer.toString(ID++) + ".csv");
-
-        lastGeneratedRandomTable = table;
+        table.printDataTableToFile(randomTablesDirectory + name + ".csv");
+        return table;
     }
 
-    public static void printAttributes(){
-        for(String s: attributes){
-            System.out.println("\t" + s);
+    public String[][] getMatrix(){
+        String[][] matrix = new String[table.size()][table.get(0).size()];
+        for (int i = 0; i < table.size(); i++) {
+            for (int j = 0; j < table.get(i).size(); j++) {
+                matrix[i][j] = table.get(i).get(j);
+            }
         }
+        return matrix;
     }
 
 }

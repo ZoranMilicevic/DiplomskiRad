@@ -1,12 +1,12 @@
-package rs.ac.bg.etf.diplomskiRadZoranMilicevic.Algorithm;
+package rs.ac.bg.etf.diplomskiRadZoranMilicevic.DataflyAlgorithm;
 
 import rs.ac.bg.etf.diplomskiRadZoranMilicevic.Data.QuasiIdentifiers;
 import rs.ac.bg.etf.diplomskiRadZoranMilicevic.DomainGeneralisationHierarchy.DGH;
 
 import java.util.*;
 
-public class Anonymize {
-    public static void anonymize(int k, ArrayList<DGH> dghList, QuasiIdentifiers quasiIdentifiers){
+public class DataflyAnonymize {
+    public static void dataflyAnonymize(int k, ArrayList<DGH> dghList, QuasiIdentifiers quasiIdentifiers){
         Map<Integer, Set<String>> domains = new HashMap<>();
         for(int i=0; i<quasiIdentifiers.getNUmberOfColumns(); i++)domains.put(i, new HashSet<>());
 

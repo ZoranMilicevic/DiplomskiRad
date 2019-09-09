@@ -1,4 +1,4 @@
-package rs.ac.bg.etf.diplomskiRadZoranMilicevic.Algorithm;
+package rs.ac.bg.etf.diplomskiRadZoranMilicevic.DataflyAlgorithm;
 
 import java.util.ArrayList;
 
@@ -41,11 +41,14 @@ public class Frequency {
         occurrences+=num;
     }
 
-    //TODO check contains
     public void insertRowNumber(int number){
         if(!rowIndexList.contains(number)){
             rowIndexList.add(number);
         }
+    }
+
+    public void insertRowNumbers(ArrayList<Integer> numbers){
+        for(int number: numbers)insertRowNumber(number);
     }
 
 
