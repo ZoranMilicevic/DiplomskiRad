@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class GeneralisationTable {
-    public static final String directory = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\GeneralisationTables\\";
+    public static final String directory = "Data\\GeneralisationTables\\";
     public static final String ageGeneralisationTableFile = directory + "Age.csv";
     public static final String placesGeneralisationTableFile = directory + "City.csv";
     public static final String gpaGeneralisationTableFile = directory + "Gpa.csv";
@@ -19,8 +19,7 @@ public class GeneralisationTable {
     public static final String jmbgGeneralisationTableFile = directory + "JMBG.csv";
     public static final String[] generalisationTableFiles = {ageGeneralisationTableFile, placesGeneralisationTableFile,
             gpaGeneralisationTableFile, genderGeneralisationTableFile, moduleGeneralisationTableFile,
-            indexGeneralisationTableFile, studyYearGeneralisationTableFile, phoneNumberGeneralisationTableFile};
-            //, jmbgGeneralisationTableFile};
+            indexGeneralisationTableFile, studyYearGeneralisationTableFile, phoneNumberGeneralisationTableFile, jmbgGeneralisationTableFile};
 
     private ArrayList<ArrayList<String>> genTable;
 

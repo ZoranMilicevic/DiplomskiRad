@@ -10,7 +10,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
-public class AnonymizeTable {
+public class AnonymizeTableForm {
     private JButton anonymizeButton;
     private JTextField originalTable;
     private JTextField anonTable;
@@ -20,8 +20,8 @@ public class AnonymizeTable {
     private JList list1;
     private JPanel listPanel;
 
-    public AnonymizeTable() {
-        list1 = new JList(StudentDataTable.attributes);
+    public AnonymizeTableForm() {
+        list1 = new JList(StudentDataTable.anonAttributes);
         listPanel.setLayout(new BorderLayout());
         listPanel.add(list1);
 
@@ -29,7 +29,7 @@ public class AnonymizeTable {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                Menu.changeView(Main.frame);
+                MenuForm.changeView(Main.frame);
             }
         });
         anonymizeButton.addMouseListener(new MouseAdapter() {
@@ -40,6 +40,8 @@ public class AnonymizeTable {
                 int k = Integer.parseInt(kValue.getText());
 
                 StudentDataTable std = StudentDataTable.readFileData(origName, false);
+
+                std.removePrivateData();
 
                 int[] arr =  list1.getSelectedIndices();
                 ArrayList<Integer> attList = new ArrayList<>();
@@ -52,13 +54,13 @@ public class AnonymizeTable {
 
                 std.printAnonTableToFile(attList , qi, anonName);
 
-                new Table(StudentDataTable.readFileData(anonName, true));
+                new Table(StudentDataTable.readFileData(anonName, true), true);
             }
         });
     }
 
     public static void changeView(JFrame frame){
-        AnonymizeTable at = new AnonymizeTable();
+        AnonymizeTableForm at = new AnonymizeTableForm();
         frame.setContentPane(at.TopPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();

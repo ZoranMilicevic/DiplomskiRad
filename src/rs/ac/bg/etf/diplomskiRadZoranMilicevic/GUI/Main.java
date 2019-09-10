@@ -11,14 +11,14 @@ public class Main {
     public static ArrayList<DGH> dgh;
 
     public static void main(String[] args) {
-        System.out.println("Generating all the dghs, depending on the size of the generalisation tables data, it is possible that this could take a while");
-        dgh = DGH.generateAllDGH();
-        System.out.println("All the dghs are generated!");
-
         frame = new JFrame("Menu");
-        frame.setContentPane(new Menu().TopPanel);
+        frame.setContentPane(new MenuForm().TopPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
+
+        JOptionPane.showMessageDialog(frame, "Generating all the dghs, depending on the size of the generalisation tables data, it is possible that this could take a while");
+        dgh = DGH.generateAllDGH();
+        JOptionPane.showMessageDialog(frame, "All dghs are generated!");
         frame.setVisible(true);
     }
 }

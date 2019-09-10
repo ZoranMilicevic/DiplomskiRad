@@ -8,9 +8,10 @@ public class Table {
     JFrame jf;
     JTable jt;
 
-    public Table(StudentDataTable std) {
+    public Table(StudentDataTable std, boolean anon) {
         this.jf = new JFrame();
-        jt = new JTable(std.getMatrix(), StudentDataTable.attributes);
+        if(anon)jt = new JTable(std.getMatrix(), StudentDataTable.anonAttributes);
+        else jt = new JTable(std.getMatrix(), StudentDataTable.attributes);
 
         JScrollPane sp = new JScrollPane(jt);
         jf.add(sp);

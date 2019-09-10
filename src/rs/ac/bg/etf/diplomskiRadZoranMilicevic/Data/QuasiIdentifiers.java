@@ -21,6 +21,8 @@ public class QuasiIdentifiers {
         this.quasiIdentifiersByRows = quasiIdentifiersByRows;
     }
 
+    //---------------------------------------------------------------------------------
+
     public void insertRow(ArrayList<String> row){
         quasiIdentifiersByRows.add(row);
     }

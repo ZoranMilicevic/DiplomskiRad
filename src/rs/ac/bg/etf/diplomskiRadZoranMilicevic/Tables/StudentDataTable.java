@@ -7,7 +7,9 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class StudentDataTable {
-    public static final String directory = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\Values\\";
+    public static final String directory = "Data\\Values\\";
+    public static final String nameValueFile = directory + "Name.txt";
+    public static final String surnameValueFile = directory + "Surname.txt";
     public static final String ageValuesFile = directory + "Age.txt";
     public static final String placesValuesFile = directory + "City.txt";
     public static final String gpaValuesFile = directory + "Gpa.txt";
@@ -17,12 +19,13 @@ public class StudentDataTable {
     public static final String studyYearValuesFile = directory + "StudyYear.txt";
     public static final String phoneNumberValuesFile = directory + "Phone.txt";
     public static final String jmbgValuesFile = directory + "JMBG.txt";
-    public static final String[] valueFilesDirectories = {ageValuesFile, placesValuesFile, gpaValuesFile, genderValuesFile,
+    public static final String[] valueFilesDirectories = {nameValueFile, surnameValueFile, ageValuesFile, placesValuesFile, gpaValuesFile, genderValuesFile,
             moduleValuesFile, indexNumberValuesFile, studyYearValuesFile, phoneNumberValuesFile, jmbgValuesFile};
-    public static final String randomTablesDirectory = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\RandomTables\\";
-    public static final String anonTablesDirecotry = "C:\\Users\\Zoran Milicevic\\Documents\\InteliJProjects\\DiplomskiRad\\Data\\AnonymisedTables\\";
+    public static final String randomTablesDirectory = "Data\\RandomTables\\";
+    public static final String anonTablesDirecotry = "Data\\AnonymisedTables\\";
 
-    public static String[] attributes = {"Age", "City", "GPA", "Gender", "Module", "Index Number", "Study Year", "Phone Number", "JMBG"};
+    public static String[] attributes = {"Name", "Surname", "Age", "City", "GPA", "Gender", "Module", "Index Number", "Study Year", "Phone Number", "JMBG"};
+    public static String[] anonAttributes = {"Age", "City", "GPA", "Gender", "Module", "Index Number", "Study Year", "Phone Number", "JMBG"};
 
     ArrayList<ArrayList<String>> table;
 
@@ -41,6 +44,8 @@ public class StudentDataTable {
     public void setTable(ArrayList<ArrayList<String>> table) {
         this.table = table;
     }
+
+    //----------------------------------------------------------------------------------------
 
     public void insertRow(ArrayList<String> row){
         table.add(row);
@@ -141,6 +146,7 @@ public class StudentDataTable {
         }
 
         table.printDataTableToFile(randomTablesDirectory + name + ".csv");
+
         return table;
     }
 
@@ -152,6 +158,13 @@ public class StudentDataTable {
             }
         }
         return matrix;
+    }
+
+    public void removePrivateData(){
+        for(ArrayList<String> row:table){
+            row.remove(0);
+            row.remove(0);
+        }
     }
 
 }

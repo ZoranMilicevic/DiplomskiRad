@@ -22,6 +22,8 @@ public class ValuesList {
         this.valuesList = valuesList;
     }
 
+    //--------------------------------------------------------------
+
     public String getRandomValue(){
         Random r = new Random();
         int len = valuesList.size();
