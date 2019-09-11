@@ -2,6 +2,7 @@ package rs.ac.bg.etf.diplomskiRadZoranMilicevic.GUI;
 
 import rs.ac.bg.etf.diplomskiRadZoranMilicevic.Data.QuasiIdentifiers;
 import rs.ac.bg.etf.diplomskiRadZoranMilicevic.DataflyAlgorithm.DataflyAnonymize;
+import rs.ac.bg.etf.diplomskiRadZoranMilicevic.DomainGeneralisationHierarchy.DGH;
 import rs.ac.bg.etf.diplomskiRadZoranMilicevic.Tables.StudentDataTable;
 
 import javax.swing.*;
@@ -45,11 +46,15 @@ public class AnonymizeTableForm {
 
                 int[] arr =  list1.getSelectedIndices();
                 ArrayList<Integer> attList = new ArrayList<>();
-                for(int j:arr)attList.add(j);
+                ArrayList<DGH> dgh = new ArrayList<>();
+                for(int j:arr){
+                    attList.add(j);
+                    dgh.add(Main.dgh.get(j));
+                }
 
                 QuasiIdentifiers qi = std.createQuasiIdentifiersTable(attList);
 
-                DataflyAnonymize.dataflyAnonymize(k, Main.dgh, qi);
+                DataflyAnonymize.dataflyAnonymize(k, dgh, qi);
                 JOptionPane.showMessageDialog(Main.frame, "Success!");
 
                 std.printAnonTableToFile(attList , qi, anonName);

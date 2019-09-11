@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="DiplomskiRad:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DiplomskiRad_jar</output-path>
+    <root id="archive" name="DiplomskiRad.jar">
+      <element id="module-output" name="DiplomskiRad" />
+    </root>
+  </artifact>
+</component>
