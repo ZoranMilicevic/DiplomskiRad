@@ -1,6 +1,7 @@
 package rs.ac.bg.etf.diplomskiRadZoranMilicevic.GUI;
 
 
+import rs.ac.bg.etf.diplomskiRadZoranMilicevic.Data.GeneralisationTable;
 import rs.ac.bg.etf.diplomskiRadZoranMilicevic.DomainGeneralisationHierarchy.DGH;
 
 import javax.swing.*;

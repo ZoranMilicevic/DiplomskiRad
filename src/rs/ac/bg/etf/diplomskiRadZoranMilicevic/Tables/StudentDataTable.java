@@ -7,7 +7,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class StudentDataTable {
-    public static final String directory = "Data\\Values\\";
+    public static final String directory = System.getProperty("user.dir") + File.separator + "Data" + File.separator + "Values" + File.separator;
     public static final String nameValueFile = directory + "Name.txt";
     public static final String surnameValueFile = directory + "Surname.txt";
     public static final String ageValuesFile = directory + "Age.txt";
@@ -21,8 +21,8 @@ public class StudentDataTable {
     public static final String jmbgValuesFile = directory + "JMBG.txt";
     public static final String[] valueFilesDirectories = {nameValueFile, surnameValueFile, ageValuesFile, placesValuesFile, gpaValuesFile, genderValuesFile,
             moduleValuesFile, indexNumberValuesFile, studyYearValuesFile, phoneNumberValuesFile, jmbgValuesFile};
-    public static final String randomTablesDirectory = "Data\\RandomTables\\";
-    public static final String anonTablesDirecotry = "Data\\AnonymisedTables\\";
+    public static final String randomTablesDirectory = "Data" + File.separator + "RandomTables" + File.separator;
+    public static final String anonTablesDirecotry = "Data" + File.separator + "AnonymisedTables" + File.separator;
 
     public static String[] attributes = {"Name", "Surname", "Age", "City", "GPA", "Gender", "Module", "Index Number", "Study Year", "Phone Number", "JMBG"};
     public static String[] anonAttributes = {"Age", "City", "GPA", "Gender", "Module", "Index Number", "Study Year", "Phone Number", "JMBG"};

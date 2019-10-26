@@ -1,13 +1,13 @@
 package rs.ac.bg.etf.diplomskiRadZoranMilicevic.Data;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import rs.ac.bg.etf.diplomskiRadZoranMilicevic.GUI.Main;
+
+import javax.swing.*;
+import java.io.*;
 import java.util.ArrayList;
 
 public class GeneralisationTable {
-    public static final String directory = "Data\\GeneralisationTables\\";
+    public static final String directory = System.getProperty("user.dir") + File.separator + "Data" + File.separator + "GeneralisationTables" + File.separator;
     public static final String ageGeneralisationTableFile = directory + "Age.csv";
     public static final String placesGeneralisationTableFile = directory + "City.csv";
     public static final String gpaGeneralisationTableFile = directory + "Gpa.csv";
@@ -52,8 +52,10 @@ public class GeneralisationTable {
             }
             return new GeneralisationTable(values);
         } catch (FileNotFoundException e) {
+            JOptionPane.showMessageDialog(Main.frame, "Can't find file: " + fileName );
             e.printStackTrace();
         } catch (IOException e) {
+            JOptionPane.showMessageDialog(Main.frame, "Can't find file: " + fileName );
             e.printStackTrace();
         }
         return null;
